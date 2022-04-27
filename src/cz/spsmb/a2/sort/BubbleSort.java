@@ -1,6 +1,7 @@
 package cz.spsmb.a2.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class BubbleSort {
     public static int sort1(int[] pole) {
@@ -45,10 +46,15 @@ public class BubbleSort {
         return pocet;
     }
     public static void main(String[] args) {
-        int[] pole = {1, 2, 3, 4, 1, 6, 7, 9, 2};
+        int[] pole = new int[55];
+        Random rnd = new Random();
+        for (int i = 0; i < pole.length; i++) {
+            pole[i] = rnd.nextInt(111);
+        }
+        int[] pole2;// = new int[pole.length];
+        pole2 = Arrays.copyOf(pole, pole.length);
         int pocet = BubbleSort.sort1(pole);
         System.out.println(pocet);
-        int[] pole2 = {1, 2, 3, 4, 1, 6, 7, 9, 2};
         pocet = BubbleSort.sort2(pole2);
         System.out.println(pocet);
     }
