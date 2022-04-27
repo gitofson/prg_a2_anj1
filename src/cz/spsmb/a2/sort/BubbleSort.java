@@ -11,9 +11,9 @@ public class BubbleSort {
         while (proh) {
             proh = false;
             for (int j = 0; j < pole.length - i - 1; j++) {
-
+                pocet++;
                 if (pole[j + 1] < pole[j]) {
-                    pocet++;
+
                     int p = pole[j];
                     pole[j] = pole[j + 1];
                     pole[j + 1] = p;
@@ -33,9 +33,9 @@ public class BubbleSort {
         for (int i = 0; i < pole.length - 1; i++) {
             //for (int j = 0; j < pole.length - 1 ; j++) { //neoptimalizovaná varianta
             for (int j = 0; j < pole.length - 1 - i; j++) { //optimalizovaná varianta
-
+                pocet++;
                 if(pole[j] > pole[j+1]) {
-                    pocet++;
+
                     int tmp = pole[j+1];
                     pole[j+1] = pole[j];
                     pole[j] = tmp;
